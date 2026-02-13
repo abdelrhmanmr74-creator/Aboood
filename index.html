@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شهودتي 💕</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Amiri:wght@400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-dark: #b8935e;
+            --gold-light: #d4af76;
+            --cream: #faf7f2;
+            --beige: #e8e3d6;
+            --charcoal: #2d2d2d;
+            --white: #ffffff;
+            --shadow: rgba(184, 147, 94, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--beige) 100%);
+            color: var(--charcoal);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Elegant background pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(184, 147, 94, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(184, 147, 94, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Music control - elegant */
+        .music-control {
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            z-index: 1000;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 8px 32px var(--shadow);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 3px solid var(--white);
+        }
+
+        .music-control:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 12px 48px var(--shadow);
+        }
+
+        .music-icon {
+            font-size: 28px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        /* Container */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Opening screen - luxurious */
+        .opening-screen {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .opening-screen::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(184, 147, 94, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInDown 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px var(--shadow);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            color: var(--charcoal);
+            margin-bottom: 50px;
+            opacity: 0.8;
+            animation: fadeIn 2s ease-out 0.5s both;
+            font-weight: 300;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .ornament {
+            width: 150px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+            margin: 30px auto;
+            position: relative;
+            animation: fadeIn 2s ease-out 1s both;
+        }
+
+        .ornament::before,
+        .ornament::after {
+            content: '◆';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold-dark);
+            font-size: 12px;
+        }
+
+        .ornament::before {
+            right: -15px;
+        }
+
+        .ornament::after {
+            left: -15px;
+        }
+
+        .scroll-hint {
+            margin-top: 60px;
+            font-size: 1rem;
+            color: var(--gold-dark);
+            opacity: 0.6;
+            animation: bounce 2s infinite;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+            60% { transform: translateY(-7px); }
+        }
+
+        /* Section styling */
+        .section {
+            background: var(--white);
+            border-radius: 30px;
+            padding: 80px 60px;
+            margin: 80px 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(184, 147, 94, 0.1);
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(184, 147, 94, 0.05) 0%, transparent 70%);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--gold-dark);
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            font-weight: 600;
+        }
+
+        .section-content {
+            font-size: 1.3rem;
+            line-height: 2.2;
+            color: var(--charcoal);
+            text-align: center;
+            opacity: 0.85;
+        }
+
+        /* Memory Game */
+        .memory-game {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 600px;
+            margin: 40px auto;
+            perspective: 1000px;
+        }
+
+        .memory-card {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-dark) 100%);
+            border-radius: 15px;
+            cursor: pointer;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px var(--shadow);
+        }
+
+        .memory-card:hover {
+            transform: scale(1.05);
+        }
+
+        .memory-card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .memory-card.matched {
+            opacity: 0.6;
+            cursor: default;
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            font-size: 3rem;
+        }
+
+        .card-front {
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-dark) 100%);
+            color: white;
+        }
+
+        .card-back {
+            background: var(--white);
+            transform: rotateY(180deg);
+            border: 2px solid var(--gold-light);
+        }
+
+        /* Quiz */
+        .quiz-container {
+            max-width: 700px;
+            margin: 40px auto;
+        }
+
+        .quiz-question {
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .quiz-options {
+            display: grid;
+            gap: 15px;
+        }
+
+        .quiz-option {
+            background: var(--beige);
+            padding: 20px 30px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .quiz-option:hover {
+            background: var(--gold-light);
+            color: white;
+            transform: translateX(-5px);
+            border-color: var(--gold-dark);
+        }
+
+        .quiz-option.correct {
+            background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
+            color: white;
+            border-color: var(--gold-dark);
+        }
+
+        .quiz-option.wrong {
+            background: #d4a5a5;
+            color: white;
+        }
+
+        .quiz-result {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.3rem;
+            color: var(--gold-dark);
+            font-weight: 500;
+        }
+
+        .quiz-next-btn {
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px var(--shadow);
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .quiz-next-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px var(--shadow);
+        }
+
+        /* Hidden hearts */
+        .hearts-container {
+            position: relative;
+            min-height: 400px;
+            background: linear-gradient(135deg, rgba(184, 147, 94, 0.05) 0%, transparent 100%);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 40px 0;
+        }
+
+        .hidden-heart {
+            position: absolute;
+            font-size: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 4px 10px var(--shadow));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hidden-heart:hover {
+            transform: scale(1.3);
+            filter: drop-shadow(0 8px 20px var(--shadow));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        .hidden-heart:nth-child(1) { top: 20%; left: 15%; animation-delay: 0s; }
+        .hidden-heart:nth-child(2) { top: 60%; left: 25%; animation-delay: 0.5s; }
+        .hidden-heart:nth-child(3) { top: 30%; left: 70%; animation-delay: 1s; }
+        .hidden-heart:nth-child(4) { top: 70%; left: 60%; animation-delay: 1.5s; }
+        .hidden-heart:nth-child(5) { top: 45%; left: 45%; animation-delay: 2s; }
+
+        .heart-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: white;
+            padding: 60px 50px;
+            border-radius: 30px;
+            box-shadow: 0 20px 80px rgba(0,0,0,0.3);
+            z-index: 2000;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 3px solid var(--gold-light);
+        }
+
+        .heart-message.show {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .heart-message-text {
+            font-size: 1.3rem;
+            line-height: 2.2;
+            color: var(--charcoal);
+            margin-bottom: 30px;
+            font-family: 'Amiri', serif;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .close-message {
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .close-message:hover {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .overlay.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* Timeline - luxurious */
+        .timeline {
+            position: relative;
+            padding: 60px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--gold-light), var(--gold-dark));
+            box-shadow: 0 0 10px var(--shadow);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 60px 0;
+            opacity: 0;
+            animation: fadeInTimeline 0.8s ease-out forwards;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.8s; }
+        .timeline-item:nth-child(5) { animation-delay: 1s; }
+
+        @keyframes fadeInTimeline {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .timeline-content {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(232,227,214,0.5));
+            padding: 35px;
+            border-radius: 20px;
+            width: 42%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            border: 2px solid var(--gold-light);
+            backdrop-filter: blur(10px);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: auto;
+            margin-left: 58%;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+            margin-right: 58%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+            border-radius: 50%;
+            border: 5px solid var(--white);
+            z-index: 2;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--gold-dark);
+            font-size: 1rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .timeline-text {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: var(--charcoal);
+        }
+
+        /* Counter */
+        .counter-section {
+            text-align: center;
+            padding: 80px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(232,227,214,0.7));
+            border-radius: 30px;
+            margin: 80px 0;
+            border: 2px solid var(--gold-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .counter-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(184, 147, 94, 0.1) 0%, transparent 50%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+
+        .counter-number {
+            font-size: 7rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 30px 0;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            z-index: 1;
+        }
+
+        .counter-label {
+            font-size: 1.8rem;
+            color: var(--charcoal);
+            opacity: 0.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Photo section */
+        .photo-section {
+            text-align: center;
+            padding: 60px 40px;
+        }
+
+        .photo-frame {
+            display: inline-block;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            margin: 40px 0;
+            transform: rotate(-1deg);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            max-width: 700px;
+            border: 3px solid var(--gold-light);
+        }
+
+        .photo-frame:hover {
+            transform: rotate(0deg) scale(1.03);
+            box-shadow: 0 25px 80px rgba(0,0,0,0.2);
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, var(--beige) 0%, var(--cream) 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--gold-dark);
+            margin-bottom: 20px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .photo-placeholder:hover {
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-dark) 100%);
+            color: white;
+        }
+
+        .photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-caption {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--gold-dark);
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        #photoInput {
+            display: none;
+        }
+
+        /* Final message */
+        .final-message {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1a1a1a 100%);
+            color: white;
+            padding: 100px 60px;
+            border-radius: 30px;
+            text-align: center;
+            margin: 80px 0;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            border: 3px solid var(--gold-dark);
+        }
+
+        .final-message::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(184, 147, 94, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(184, 147, 94, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .final-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+        }
+
+        .final-text {
+            font-size: 1.5rem;
+            line-height: 2.5;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+            opacity: 0.95;
+        }
+
+        .heart-animation {
+            font-size: 4rem;
+            animation: heartbeat 1.5s ease-in-out infinite;
+            display: inline-block;
+            margin: 30px;
+            filter: drop-shadow(0 4px 20px rgba(184, 147, 94, 0.5));
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.3); }
+            50% { transform: scale(1); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 3rem;
+            }
+
+            .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .section {
+                padding: 50px 30px;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .memory-game {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+
+            .timeline::before {
+                right: 30px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 80px);
+                margin-left: 80px !important;
+                margin-right: 0 !important;
+            }
+
+            .timeline-dot {
+                right: 30px;
+                transform: translate(0, -50%);
+            }
+
+            .counter-number {
+                font-size: 4.5rem;
+            }
+
+            .final-message {
+                padding: 60px 30px;
+            }
+
+            .final-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: var(--gold-light);
+            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 999;
+            animation: floatParticle 8s ease-in infinite;
+        }
+
+        @keyframes floatParticle {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="music-control" onclick="toggleMusic()">
+        <div class="music-icon" id="musicIcon">🎵</div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="Albumaty_Com_kayrwky_nfsy_ahbk_-_ma_sart_mwl_alblad.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="heart-message" id="heartMessage">
+        <p class="heart-message-text" id="heartMessageText"></p>
+        <button class="close-message" onclick="closeMessage()">✕</button>
+    </div>
+
+    <div class="container">
+        <!-- Opening -->
+        <div class="opening-screen">
+            <h1 class="main-title">شهودتي</h1>
+            <div class="ornament"></div>
+            <p class="subtitle">من قلب عبد الرحمن</p>
+            <p class="scroll-hint">⬇ اكتشفي الهدية ⬇</p>
+        </div>
+
+        <!-- First meeting -->
+        <div class="section">
+            <h2 class="section-title">✨ 13 نوفمبر 2023 ✨</h2>
+            <p class="section-content">
+                أول يوم اتقابلنا... وتعرفت عليكي<br><br>
+                وضفتك في الإنستا<br><br>
+                من أول يوم... حاسس إني عارفك من زمان<br><br>
+                ومن وقتها... مبسوط إنك في حياتي 💫
+            </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="section">
+            <h2 class="section-title">رحلتنا</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">✦ 13 نوفمبر 2023 ✦</div>
+                        <div class="timeline-text">أول يوم اتقابلنا... البداية اللي غيرت حياتي</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">✦ الأيام الأولى ✦</div>
+                        <div class="timeline-text">كل يوم بيمر... كنا بنعرف بعض أكتر ونتكلم أكتر<br>نحكي عن يومنا... وكنت بشتكيلك من الشغل<br>لعبنا مع بعض... واتكلمنا في كل شيء، حتى الأشياء الصغيرة بتكون مهمة معاكي</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">✦ الخناقات الصغيرة ✦</div>
+                        <div class="timeline-text">كنا بنتخانق ونزعل شوية... عشان سوء التفاهم اللي كان بيحصل<br>ممكن بسبب كلمة... بس كنا بنقرب لبعض أكتر</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">✦ أول مرة شفتك ✦</div>
+                        <div class="timeline-text">كنتي رايحة الجامعة الصبح... وأنا لسه صاحي من النوم<br>ومن ساعتها وأنا مش ناسي الصورة دي</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">✦ بخاف عليكي ✦</div>
+                        <div class="timeline-text">كل فترة بتعدي... بحس إني بخاف عليكي أكتر ومهتم<br>وخصوصاً لما سافرتي تركيا... كنت بقلق عليكي</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">✦ لما رحتي مصر ✦</div>
+                        <div class="timeline-text">كان نفسي أقولك إني بحبك... وأنتي في الكروز والجو حلو<br>بس كنت خايف إنك ممكن تضايقي... ومايكونش مناسب</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">✦ لما قولتلك بحبك ✦</div>
+                        <div class="timeline-text">أول مرة... لما كنتي بتشوفي البيت الجديد وكنا بالليل<br>إحنا الاتنين كنا متوترين... وقولت "بحبك"<br>كان أجمل شيء حصل 💕</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">✦ أيامنا مع بعض ✦</div>
+                        <div class="timeline-text">شفنا أفلام ومسلسلات... واتكلمنا كتير وضحكنا<br>بنشيل هم بعض... والأشياء اللي بتفرحك بتفرحني</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">✦ النهاردة - 14 فبراير 2025 ✦</div>
+                        <div class="timeline-text">والأيام بتعيد نفسها... وأنتي في البحر ورايحة مصر<br>عشان أقولك بحبك... وإنتي عمري يا شهودتي ❤️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Counter -->
+        <div class="counter-section">
+            <h2 class="section-title">من يوم ما اتقابلنا</h2>
+            <div class="counter-number" id="dayCounter">0</div>
+            <div class="counter-label">يوم من السعادة</div>
+        </div>
+
+        <!-- Photo -->
+        <div class="section photo-section">
+            <h2 class="section-title">إحنا</h2>
+            <div class="photo-frame">
+                <div class="photo-placeholder" onclick="document.getElementById('photoInput').click()">
+                    <span style="font-size: 1.2rem; text-align: center; padding: 20px;">
+                        حطي صورتنا هنا 💕<br>
+                        <small style="font-size: 0.9rem; opacity: 0.7;">(اضغطي عشان تختاري الصورة)</small>
+                    </span>
+                </div>
+                <p class="photo-caption">عبد الرحمن وشهودتي</p>
+            </div>
+            <input type="file" id="photoInput" accept="image/*">
+        </div>
+
+        <!-- Hidden Hearts -->
+        <div class="section">
+            <h2 class="section-title">رسائل مخفية 💝</h2>
+            <p style="text-align: center; color: var(--charcoal); margin-bottom: 20px; font-size: 1.1rem;">
+                دوري على القلوب المخفية... كل قلب فيه رسالة ليكي
+            </p>
+            <div class="hearts-container">
+                <div class="hidden-heart" onclick="showMessage(0)">💛</div>
+                <div class="hidden-heart" onclick="showMessage(1)">💙</div>
+                <div class="hidden-heart" onclick="showMessage(2)">🤍</div>
+                <div class="hidden-heart" onclick="showMessage(3)">❤️</div>
+            </div>
+        </div>
+
+        <!-- Final Message -->
+        <div class="final-message">
+            <div class="ornament" style="background: linear-gradient(90deg, transparent, var(--gold-light), transparent);"></div>
+            <p class="final-text">
+                يارب نفضل مع بعض طول العمر<br>
+                ودايماً نكون مبسوطين ومع بعض<br><br>
+                <strong style="font-size: 1.8rem; color: var(--gold-light);">بحبك يا شهد ❤️</strong>
+            </p>
+            <div class="heart-animation">❤️</div>
+        </div>
+    </div>
+
+    <script>
+        // Music
+        let musicPlaying = false;
+        const music = document.getElementById('backgroundMusic');
+        const musicIcon = document.getElementById('musicIcon');
+
+        function toggleMusic() {
+            if (musicPlaying) {
+                music.pause();
+                musicIcon.textContent = '🎵';
+                musicPlaying = false;
+            } else {
+                music.play();
+                musicIcon.textContent = '🎶';
+                musicPlaying = true;
+            }
+        }
+
+        document.body.addEventListener('click', function() {
+            if (!musicPlaying) {
+                music.play();
+                musicIcon.textContent = '🎶';
+                musicPlaying = true;
+            }
+        }, { once: true });
+
+        // Counter
+        function updateCounter() {
+            const firstMeeting = new Date('2023-11-13');
+            const today = new Date();
+            const diffTime = Math.abs(today - firstMeeting);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            
+            let count = 0;
+            const counterElement = document.getElementById('dayCounter');
+            const interval = setInterval(() => {
+                count += Math.ceil(diffDays / 60);
+                if (count >= diffDays) {
+                    count = diffDays;
+                    clearInterval(interval);
+                }
+                counterElement.textContent = count.toLocaleString('ar-EG');
+            }, 25);
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    updateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        observer.observe(document.querySelector('.counter-section'));
+
+        // Photo upload
+        document.getElementById('photoInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const photoPlaceholder = document.querySelector('.photo-placeholder');
+                    photoPlaceholder.innerHTML = `<img src="${event.target.result}" alt="عبد الرحمن وشهد">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Hidden Messages
+        const messages = [
+            "عارف بتعمل فيا إيه كلمة حبيبي؟<br>زي اللي أول مرة بيحس بأمان 💛",
+            "بشوفك زي أول مرة<br>كنتي غيرهم، كنتي حرة<br>واللي في قلبك كان بره<br>انتي كل حلم عدى واستخبى<br>خرجتيه مني بزقه<br>بتشديني ودايماً سابقة 💙",
+            "أصل التفاصيل أجمل بكتير بوجودك فيها<br>بوجودك فيها<br>أتاريك انت يا حبيبي انت<br>اللي محليها حياتي انت محليها 🤍",
+            "هي التي علمتني كيف أعشقها<br>هي التي سقتني شهد ريّاها<br>روح من الله سواها لنا<br>بشرا كساها حسنا وجملها وحلاها ❤️"
+        ];
+
+        function showMessage(index) {
+            const messageBox = document.getElementById('heartMessage');
+            const messageText = document.getElementById('heartMessageText');
+            const overlay = document.getElementById('overlay');
+            
+            messageText.innerHTML = messages[index];
+            messageBox.classList.add('show');
+            overlay.classList.add('show');
+        }
+
+        function closeMessage() {
+            document.getElementById('heartMessage').classList.remove('show');
+            document.getElementById('overlay').classList.remove('show');
+        }
+
+        document.getElementById('overlay').addEventListener('click', closeMessage);
+
+        // Floating particles
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.animationDelay = Math.random() * 5 + 's';
+            particle.style.animationDuration = (Math.random() * 5 + 5) + 's';
+            document.body.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 13000);
+        }
+
+        setInterval(createParticle, 800);
+
+        // Smooth scroll reveal
+        const sections = document.querySelectorAll('.section');
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(50px)';
+            section.style.transition = 'all 1s cubic-bezier(0.4, 0, 0.2, 1)';
+            sectionObserver.observe(section);
+        });
+    </script>
+</body>
+</html>
